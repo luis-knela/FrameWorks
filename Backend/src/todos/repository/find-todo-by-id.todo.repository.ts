@@ -6,6 +6,6 @@ export class FindTodoByIdRepository {
     constructor(private readonly prisma: PrismaService) {}
 
     async findById(id: string) {
-        return await this.prisma.todo.FindUnique({where: {id: id}});
+        return await this.prisma.todo.findUnique({where: {id: id}});
     }
 }
