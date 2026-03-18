@@ -3,10 +3,10 @@ import { PrismaService } from "src/shared/databases/prisma.database";
 import { CreateTodoDto } from "../dto/create-todo.dto";
 
 @Injectable()
-export class CreatetodoRepository {
+export class CreateTodoRepository {
     constructor(private readonly prisma: PrismaService) {}
 
-    async execute(data: CreateTodoDto) {
+    async create(data: CreateTodoDto) {
         return await this.prisma.todo.create({data});
     }
 }
