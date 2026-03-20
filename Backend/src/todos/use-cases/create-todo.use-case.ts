@@ -1,7 +1,8 @@
-import { Logger } from "@nestjs/common";
+import { Injectable, Logger } from "@nestjs/common";
 import { CreateTodoRepository } from "../repository";
 import { CreateTodoDto } from "../dto/create-todo.dto";
 
+@Injectable()
 export class CreateTodoUseCase {
     constructor(
         private readonly createTodoRepository: CreateTodoRepository,
