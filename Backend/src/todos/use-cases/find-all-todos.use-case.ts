@@ -8,7 +8,7 @@ export class FindAllTodosUseCase {
         private readonly logger: Logger
     ) {}
 
-    async execute(id: string) {
+    async execute() {
         try {
             this.logger.log('Finding all toDos...');
             const todos = await this.findAllTodosRepository.findAll();
