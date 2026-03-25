@@ -11,13 +11,13 @@ export class CreateTodoUseCase {
 
     async execute(data: CreateTodoDto) {
         try {
-            this.logger.log('Creating todo...');
+            this.logger.log('Creating toDo...');
             const todo = await this.createTodoRepository.create(data);
-            this.logger.log('Todo created successfully');
+            this.logger.log('toDo created successfully');
             return todo;
         } catch (error) {
             this.logger.error(error);
-            throw new Error("Failed to create todo");
+            throw new Error("Failed to create toDo");
         }
     }
 }
