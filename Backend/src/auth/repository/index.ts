@@ -1,1 +1,2 @@
-//qualquer coisa que for necessário para o login, como email e senha
+export * from './create-user.repository';
+export * from './find-user-by-email.repository';
