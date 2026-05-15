@@ -1,16 +1,16 @@
-import { BadRequestException, Injectable, LoggerService } from "@nestjs/common";
+import { BadRequestException, Injectable, Logger } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 import { CreateUserRepository, FindUserByEmailRepository } from "../repository";
 import { RegisterDto } from "../dto/register.dto";
 import * as bcrypt from "bcrypt";
 
-Injectable()
+@Injectable()
 export class RegisterUseCase {
     constructor(
         private readonly createUserRepository: CreateUserRepository,
         private readonly findUserByEmailRepository: FindUserByEmailRepository,
         private readonly jwtService: JwtService,
-        private readonly logger: LoggerService,
+        private readonly logger: Logger,
     ) {}   
     
     async execute(data: RegisterDto) {
