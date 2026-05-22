@@ -5,7 +5,7 @@ import { RegisterDto } from "./dto/register.dto";
 import { LoginDto } from "./dto/login.dto";
 
 @Injectable()
-export class AuthSevice {
+export class AuthService {
     constructor(
         private readonly registerUseCase: RegisterUseCase,
         private readonly loginUseCase: LoginUseCase

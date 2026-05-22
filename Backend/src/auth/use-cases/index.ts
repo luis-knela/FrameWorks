@@ -1,1 +1,2 @@
-//qualquer coisa que for necessário para o login, como email e senha
+export * from './login.use-cases'
+export * from './register.use-cases'

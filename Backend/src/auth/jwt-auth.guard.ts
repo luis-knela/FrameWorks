@@ -1,1 +1,5 @@
-//qualquer coisa que for necessário para o login, como email e senha
+import { Injectable } from "@nestjs/common";
+import { AuthGuard } from "@nestjs/passport";
+
+@Injectable()
+export class JwtAuthGuard extends AuthGuard('jwt') {}
